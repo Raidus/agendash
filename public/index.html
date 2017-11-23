@@ -48,6 +48,7 @@
                   <th>Status</th>
                   <th>Name</th>
                   <th>Label</th>
+                  <th>Retried</th>
                   <th>Last run started</th>
                   <th>Next run starts</th>
                   <th>Last finished</th>
@@ -132,6 +133,9 @@
       </td>
       <td>
         <%- job.data.label %>
+      </td>
+      <td>
+        <%- job.data.retried %>
       </td>
       <td><% if (job.lastRunAt) { %><time datetime="<%- moment(job.lastRunAt).toISOString() %>"><%- moment(job.lastRunAt).fromNow() %></time><% } %></td>
       <td><% if (job.nextRunAt) { %><time datetime="<%- moment(job.nextRunAt).toISOString() %>"><%- moment(job.nextRunAt).fromNow() %></time><% } %></td>
